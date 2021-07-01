@@ -1,15 +1,46 @@
-.intro {
-    display: inline-block;
-    overflow: auto;
-}
-
-.intro_img {
-    float: right;
-    width: 300px;
-    height: 400px;
-}
-
-.list1 {
-    list-style-type: none;
-    display: inline-block;
-}
+    body {
+        background-color: rgb(50, 62, 73);
+        color: aliceblue;
+    }
+    
+    nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+    
+    li a {}
+    
+    .bg {
+        background-image: url(bgig.jpg);
+        background-size: 1200px 600px;
+        background-repeat: no-repeat;
+        width: 1200px;
+        height: 600px;
+        padding: 20px 20px 20px 20px;
+    }
+    
+    .content {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 130px;
+        max-width: 350px;
+        padding: 30px 20px;
+    }
+    
+    #intro {
+        display: inline-block;
+        overflow: auto;
+    }
+    
+    .intro_img {
+        float: right;
+        width: 300px;
+        height: 400px;
+        padding: 10px;
+    }
+    
+    #list1 {
+        list-style-type: none;
+        display: inline-block;
+    }
