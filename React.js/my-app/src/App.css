@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  background-color: rgb(126, 93, 93);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+color: rgb(229, 220, 220);
+}
+
+.counter{
+  font-size: 5rem;
+  color: white;
+  margin: 1rem ;
+}
