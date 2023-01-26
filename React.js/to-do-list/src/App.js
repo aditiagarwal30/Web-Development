@@ -1,27 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import Todo from './Todo';
 
-
-const xyz={
-  title:"Task1",
-  description: "Wash laundry",
-  date: "22/01/23",
-  status: false
-}
-
 function App() {
+  const [title, setTitle]= useState("Task 1");
+  const [description, setDescription]= useState("");
+  const [date, setDate]= useState("");
+  const [todos, setTodos]= useState([])
+
+  const handleSave = (event) => {
+    event.preventDefault();
+    const newTodo= {
+      title: title,
+      description: description,
+      date: date,
+      status: false
+    }
+    setTodos([...todos,newTodo])
+  }
+
   return (
     <div className='container'>
-
-      <form>
-        <input />
+      <form onSubmit={handleSave}>
+        <input value={title} onChange={(event)=> setTitle(event.target.value)}/>
+        <input value={description} onChange={(event)=> setDescription(event.target.value)}/>
+        <input value={date} type="date" onChange={(event)=>setDate(event.target.value)} />
+        <input type="submit" value="Submit" />
       </form>
-      
-      <Todo todo={xyz}  />
 
+
+    {todos.map(todo => <Todo todo={todo}/>)}
     </div>
   )
 }
 
 export default App
+
+//onchange takes callback
+//cant call a fucntion with () inside JSX
+// binding local variables with JSX
